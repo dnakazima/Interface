@@ -20,6 +20,9 @@ public class RentalService {
 	public void processInvoice(CarRental carRental) {
 		long t1 = carRental.getStart().getTime();
 		long t2 = carRental.getFinish().getTime();
+		
+		//mili * 1000 = sec sec / 60 = min min / 60 = hora
+		
 		double hours = (double)(t2 - t1) / 1000 / 60 / 60;
 		
 		double basicPayment;
